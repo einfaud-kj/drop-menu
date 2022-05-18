@@ -53,7 +53,7 @@ ul > li {
   visibility: hidden;
   opacity: 0;
   height: 0;
-  transition: height 0.3s ease;
+  transition: height 0.3s ease, opacity 0.3s ease;
 }
 
 .main:hover .submenu2 li {
