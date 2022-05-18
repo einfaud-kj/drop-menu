@@ -6,10 +6,15 @@ a {
   font-size: 24px;
 }
 
-li {
+ul > li > ul > li > a {
+  font-size: 16px;
+}
+
+ul > li {
+  position: relative;
   list-style: none;
   width: 300px;
-  height: 50px;
+  height: 84px;
   text-align: center;
   line-height: 50px;
 }
@@ -21,6 +26,7 @@ li {
 }
 
 .main {
+  position: relative;
   margin: 100px 30px;
 }
 
@@ -31,9 +37,51 @@ li {
   padding: 15px;
 }
 
-ul > li > ul > li {
-  background-color: aquamarine;
-  a {
-    font-size: 16px;
+// ul > li > ul > li {
+//   background-color: aquamarine;
+//   margin: 0 auto;
+//   width: 300px;
+//   height: 50px;
+//   a {
+//     font-size: 16px;
+//   }
+// }
+
+.submenu1 {
+  display: none;
+}
+.main:hover .submenu1 {
+  display: block;
+  li {
+    background-color: red;
+    margin: 0 auto;
+    width: 300px;
+    height: 50px;
   }
+}
+
+.submenu2 li {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: height 0.3s ease;
+}
+.main:hover .submenu2 li {
+  visibility: visible;
+  background-color: aquamarine;
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
+  opacity: 1;
+}
+
+.overf {
+  overflow: hidden;
+}
+.main:hover .overf {
+  overflow: visible;
+  background-color: aquamarine;
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
 }
